@@ -27,16 +27,21 @@ uint32_t _16to32(uint16_t number) {
   return res;
 }
 
+int32_t _16to32(int16_t number) {
+  int32_t res = static_cast<int32_t>(number);
+  return res;
+}
+
 int main() {
 
   uint16_t x       = 0x8001;
-	uint16_t minus_x = 0x8001 * (-1);
+	int16_t minus_x  = -1024;
 
 	print_hex_dec_bin<uint16_t>(x, "16 bits");
   print_hex_dec_bin<uint32_t>(_16to32(x), "32 bits");
 
-	print_hex_dec_bin<uint16_t>(minus_x, "16 bits minus");
-	print_hex_dec_bin<uint32_t>(_16to32(minus_x), "32 bits minus");
+	print_hex_dec_bin<int16_t>(minus_x, "16 bits minus");
+	print_hex_dec_bin<int32_t>(_16to32(minus_x), "32 bits minus");
 
   return 0;
 }
