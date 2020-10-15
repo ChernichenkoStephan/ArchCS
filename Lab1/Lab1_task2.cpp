@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bitset>
+#include <climits>
 
 // clear && g++ -o task2 Lab1_task2.cpp && ./task2
 
