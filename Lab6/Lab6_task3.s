@@ -64,7 +64,7 @@ _main:
   begin_iteration:
   movl (%rsp), %eax
   cmp %rax, %rbx
-  je end
+  jg end
 
   movq %r14, %r13 //; curr = next
 
